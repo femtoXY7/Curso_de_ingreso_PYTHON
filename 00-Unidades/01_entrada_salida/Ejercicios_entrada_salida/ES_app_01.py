@@ -1,3 +1,7 @@
+#el comando "alert()" sirve para soltarte una ventanita emergente
+#el texto que quieras incluir tiene que estar dentro del alert
+#asi "alert("titulo que aparece arriba", "texto que aparece en el medio")"
+
 import tkinter
 from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question

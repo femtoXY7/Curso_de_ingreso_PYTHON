@@ -1,3 +1,6 @@
+#get sirve para agarrar un valor
+#crear una variable en la que este el valor que queremos agarrar y al final de esa misma variable incluir ".get()"
+
 import tkinter
 from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question
