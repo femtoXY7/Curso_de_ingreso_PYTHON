@@ -9,7 +9,7 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre: Ignacio Gonzalo
+nombre : Ignacio Gonzalo
 apellido: Taborda Torres
 ---
 Ejercicio: entrada_salida_01
