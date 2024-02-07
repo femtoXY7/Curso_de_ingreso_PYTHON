@@ -52,14 +52,44 @@ class App(customtkinter.CTk):
         self.btn_total_iva.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_total_on_click(self):
-        pass
+        producto1_txt = self.txt_importe_1.get()
+        producto2_txt = self.txt_importe_2.get()
+        producto3_txt = self.txt_importe_3.get()
+        producto1_numero = float(producto1_txt)
+        producto2_numero = float(producto2_txt)
+        producto3_numero = float(producto3_txt)
+        suma = producto1_numero + producto2_numero + producto3_numero
+        mensaje = f"El resultado de la suma de todos los productos es de: ${suma}"
+        alert("", mensaje)
 
     def btn_promedio_on_click(self):
-        pass
+        producto1_txt = self.txt_importe_1.get()
+        producto2_txt = self.txt_importe_2.get()
+        producto3_txt = self.txt_importe_3.get()
+        producto1_numero = float(producto1_txt)
+        producto2_numero = float(producto2_txt)
+        producto3_numero = float(producto3_txt)
+        promedio = (producto1_numero + producto2_numero + producto3_numero) / 3
+        mensaje = f"El promedio de todos los productos es de: ${promedio}"
+        alert("", mensaje)
 
     def btn_total_iva_on_click(self):
-        pass      
-    
+        producto1_txt = self.txt_importe_1.get()
+        producto2_txt = self.txt_importe_2.get()
+        producto3_txt = self.txt_importe_3.get()
+        producto1_numero = float(producto1_txt)
+        producto2_numero = float(producto2_txt)
+        producto3_numero = float(producto3_txt)
+        total_incluyendo_iva = producto1_numero * 1.21 + producto2_numero * 1.21 + producto3_numero * 1.21
+        mensaje = f"El total incluyendo el iva de todos los productos es: ${total_incluyendo_iva}"
+        alert("", mensaje)     
+
+#Para el departamento de facturación:
+#  A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
+#   B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
+#	C.	ingresar tres precios de productos sumarlos y mostrar el precio final (más IVA 21%).
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

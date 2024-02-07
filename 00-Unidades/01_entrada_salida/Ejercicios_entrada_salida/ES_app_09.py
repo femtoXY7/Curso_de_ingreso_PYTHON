@@ -33,8 +33,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-        
+        sueldo_txt = self.txt_sueldo.get()
+        sueldo_numero = float(sueldo_txt)
+        incremento = sueldo_numero * 0.15 + sueldo_numero
+        mensaje = f"Su sueldo actualizado con el incremento del 15% es de: {incremento}"
+        alert("", mensaje)
+#Al presionar el botón 'Calcular', se deberá obtener el valor contenido en la caja de texto (txtSueldo), 
+#transformarlo a número y mostrar el importe de sueldo actualizado con el incremento del 15% utilizando el Dialog Alert.       
     
 if __name__ == "__main__":
     app = App()

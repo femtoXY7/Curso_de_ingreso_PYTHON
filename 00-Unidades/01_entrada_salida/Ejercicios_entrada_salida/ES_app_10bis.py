@@ -41,8 +41,15 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
-
+        importe_txt = self.txt_importe.get()
+        descuento_txt = self.txt_descuento.get()
+        importe_numero = float(importe_txt)
+        descuento_numero = float(descuento_txt)
+        calculo = importe_numero - importe_numero * descuento_numero / 100
+        mensaje = f"El importes con el descuento es de : {calculo}"
+        alert("", mensaje)
+#Al presionar el botón  'Calcular', se deberán obtener los valores contenidos en las cajas de texto (txt_importe y txt_descuento), 
+#transformarlos en números y mostrar el importe actualizado con el descuento utilizando el Dialog Alert.
 
 if __name__ == "__main__":
     app = App()

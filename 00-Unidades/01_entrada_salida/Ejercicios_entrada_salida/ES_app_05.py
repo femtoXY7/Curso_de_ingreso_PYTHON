@@ -43,7 +43,7 @@ class App(customtkinter.CTk):
         nombre = self.txt_nombre.get()
         edad = self.txt_edad.get()
         alert("titulo", f"Usted se llama {nombre} y su edad es {edad} años")
-
+        #self.txt._nombre es el cuadrado, el .get t agarra lo que pusiste en el cuadrado 
         
     
 if __name__ == "__main__":
