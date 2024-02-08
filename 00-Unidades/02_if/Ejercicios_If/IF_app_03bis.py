@@ -22,7 +22,7 @@ class App(customtkinter.CTk):
 
         self.title("UTN FRA")
 
-        self.label1 = customtkinter.CTkLabel(master=self, text="Edad")
+        self.label1 = customtkinter.CTkLabel(master=self, text="Altura (Metros)")
         self.label1.grid(row=0, column=0, padx=20, pady=10)
 
         self.txt_edad = customtkinter.CTkEntry(master=self)
@@ -33,7 +33,13 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
+        altura_txt = self.txt_edad.get()
+        altura_num = float(altura_txt)
+
+        if altura_num > 1.8:
+            alert("", "Podes ser pivot")
+        else:
+            alert("", "No podes ser pivot")
 
 
 if __name__ == "__main__":

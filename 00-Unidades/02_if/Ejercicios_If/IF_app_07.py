@@ -42,8 +42,24 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        edad_txt = self.txt_edad.get()
+        edad_num = int(edad_txt)
         
+        tipo = self.combobox_tipo.get()
+
+        if (tipo == "NATIVO" and edad_num >= 16) or (edad_num >= 18 and tipo == "NATURALIZADO"):
+            mensaje = "Podes votar"
+        else:
+            mensaje = "No podes votar"
+
+        
+'''
+Los argentinos nativos y por opción desde los dieciséis (16) años y los argentinos
+naturalizados desde los dieciocho (18) años están habilitados a votar. 
+Al presionar el botón 'Mostrar', se deberá informar (utilizando el Dialog Alert) 
+si es o no posible que la persona concurra a votar en base a la información 
+suministrada.
+'''        
         
     
 if __name__ == "__main__":
