@@ -52,6 +52,7 @@ class App(customtkinter.CTk):
         else:
             mensaje = "No podes votar"
 
+        alert("", mensaje)
         
 '''
 Los argentinos nativos y por opción desde los dieciséis (16) años y los argentinos

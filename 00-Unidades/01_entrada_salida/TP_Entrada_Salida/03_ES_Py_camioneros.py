@@ -63,8 +63,8 @@ class App(customtkinter.CTk):
         km_txt = self.txt_kilometros.get()
         km_numero = float(km_txt)
         velocidad = 90
-        calculo_tiempo = km_numero / velocidad
-        mensaje = f"Se tardara en transladar los materiales {calculo_tiempo} horas"
+        calculo_tiempo_hs = round(km_numero / velocidad,2)
+        mensaje = f"Se tardara en transladar los materiales {calculo_tiempo_hs} hs"
         alert("", mensaje)
 
 #B.	A partir del ingreso de la cantidad de kilómetros que tiene que recorrer estos camiones para llegar al destino de la obra, 

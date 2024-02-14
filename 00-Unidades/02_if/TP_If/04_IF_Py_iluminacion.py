@@ -43,9 +43,50 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
-        pass
+        marca_lamparita = self.combobox_marca.get()
+        cantidad_lamparita = self.combobox_cantidad.get()
+        cantidad_lamparita_num = int(cantidad_lamparita)
         
-    
+        valor_lamparita = cantidad_lamparita_num * 800
+
+        if cantidad_lamparita_num >= 6:
+            descuento = (50 * valor_lamparita) / 100 #50%
+            total_a_pagar = valor_lamparita - descuento
+        elif cantidad_lamparita_num == 5:
+            descuento = (30 * valor_lamparita) / 100 #30%
+            total_a_pagar = valor_lamparita - descuento
+            if marca_lamparita == "ArgentinaLuz":
+                descuento = (40 * valor_lamparita) / 100 #40%
+                total_a_pagar = valor_lamparita - descuento
+        elif cantidad_lamparita_num == 4:
+            descuento = (20 * valor_lamparita) / 100 #20%
+            total_a_pagar = valor_lamparita - descuento
+            if marca_lamparita == "ArgentinaLuz" or marca_lamparita == "FelipeLamparas": 
+                descuento = (25 * valor_lamparita) / 100 #25%
+                total_a_pagar = valor_lamparita - descuento
+        elif cantidad_lamparita_num == 3:
+            descuento = (5 * valor_lamparita) / 100 #5%
+            total_a_pagar = valor_lamparita - descuento
+            if marca_lamparita == "ArgentinaLuz":
+                descuento = (15 * valor_lamparita) / 100 #15%
+                total_a_pagar = valor_lamparita - descuento
+            elif marca_lamparita == "FelipeLamparas":
+                descuento = (10 * valor_lamparita) / 100 #10%
+                total_a_pagar = valor_lamparita - descuento
+
+        if total_a_pagar > 3999:
+            descuento = (5 *total_a_pagar) / 100
+            total_a_pagar = total_a_pagar - descuento
+
+        mensaje = f"El total a pagar es de ${total_a_pagar}"
+
+        alert("UTN", mensaje)
+        
+
+
+
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

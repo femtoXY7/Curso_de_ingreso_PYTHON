@@ -52,16 +52,22 @@ class App(customtkinter.CTk):
         temperatura_c_numero = float(temperatura_c_txt)
         calculo_c = (temperatura_c_numero * 9/5) + 32
         
-        self.txt_temperatura_f.delete(0, "end")
-        self.txt_temperatura_f.insert(0, calculo_c)
+        mensaje = f"La temperatura en Fahrenheit es de {calculo_c}°"
+        alert("", mensaje)
+
+        #self.txt_temperatura_f.delete(0, "end")
+        #self.txt_temperatura_f.insert(0, calculo_c)
 
     def btn_convertir_f_c_on_click(self):
         temperatura_f_txt = self.txt_temperatura_f.get()
         temperatura_f_numero = float(temperatura_f_txt)
         calculo_f = (temperatura_f_numero - 32) * 5/9
         
-        self.txt_temperatura_c.delete(0, "end")
-        self.txt_temperatura_c.insert(0, calculo_f)
+        mensaje = f"La temperatura en Centigrados es de {calculo_f}°"
+        alert("", mensaje)
+
+        #self.txt_temperatura_c.delete(0, "end")
+        #self.txt_temperatura_c.insert(0, calculo_f)
 
 #2.	Para el departamento de Pinturas:
 #	A.	Al ingresar una temperatura en Fahrenheit debemos mostrar la temperatura en Centígrados con un mensaje concatenado 
